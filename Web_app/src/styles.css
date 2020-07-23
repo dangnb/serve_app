@@ -22,13 +22,13 @@ body {
   border-radius: 10px;
 }
 h3 {
-  line-height: 64px;
+  line-height: 54px;
   padding-left: 10px;
 }
 .panel-header {
   background-color: darkcyan;
   border-radius: 5px;
-  height: 70px;
+  height: 50px;
 }
 .btn-secondary {
   margin: 16px 16px;
@@ -70,4 +70,16 @@ p {
 }
 input.ng-touched.ng-invalid {
   border: 1px solid red;
+}
+table {
+  margin-top: 10px;
+}
+form {
+  margin-top: 10px;
+}
+.mat-dialog-container {
+  padding: 0px !important;
+}
+button {
+  margin: 5px !important;
 }

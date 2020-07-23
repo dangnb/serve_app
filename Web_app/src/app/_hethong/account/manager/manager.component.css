@@ -7,18 +7,6 @@
   margin-top: 10px;
   border-radius: 10px;
 }
-h3 {
-  line-height: 64px;
-  padding-left: 10px;
-}
-.panel-header {
-  background-color: darkcyan;
-  border-radius: 5px;
-  height: 70px;
-}
-.btn-secondary {
-  margin: 16px 16px;
-}
 .custom-pagination .page-number {
   display: inline-block;
   /* padding: 5px 12px; */

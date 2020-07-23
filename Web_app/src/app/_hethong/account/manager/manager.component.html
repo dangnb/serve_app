@@ -1,11 +1,13 @@
-<div class="container-fuild">
+<div class="container-fluid">
     <div class="panel panel-default">
-        <div class="panel-header">
-            <h3>Thông tin tìm kiếm</h3>
+        <div class="container-fluid padding">
+            <div class="panel-header ">
+                <h3>Thông tin tìm kiếm</h3>
+            </div>
         </div>
         <div class="panel-body">
             <form (ngSubmit)="search(rfSearch.value)" [formGroup]="rfSearch">
-                <div class="container">
+                <div class="container-fluid padding">
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
@@ -42,20 +44,22 @@
             <div class="panel-footer"><br /></div>
         </div>
         <div class="panel panel-danger">
-            <div class="panel-header">
-                <div class="row">
-                    <div class="col-6">
-                        <h3><i class="fas fa-bars"></i> Danh sách</h3>
-                    </div>
-                    <div class="col-6 text-right">
-                        <button mat-raised-button type="button" class="btn btn-secondary" (click)="openCreate()">
-                            <i class="fas fa-chevron-flush"></i>Tạo mới
-                        </button>
+            <div class="container-fluid padding">
+                <div class="panel-header">
+                    <div class="row">
+                        <div class="col-6">
+                            <h3><i class="fas fa-bars"></i> Danh sách</h3>
+                        </div>
+                        <div class="col-6 text-right">
+                            <button mat-raised-button type="button" class="btn btn-secondary" (click)="openCreate()">
+                                <i class="fas fa-chevron-flush"></i>Tạo mới
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="panel-body">
-                <div class="container">
+                <div class="container-fluid padding">
                     <table class="table table-bordered table-hover">
                         <thead>
                             <tr class="text-center">
