@@ -1,0 +1,7 @@
+h1{
+    text-shadow: 0.2px 0.2px 0.2px rpb(1 2 4);
+    margin-left: 100px;
+}
+.header_main{
+    border-radius: 7px;
+}

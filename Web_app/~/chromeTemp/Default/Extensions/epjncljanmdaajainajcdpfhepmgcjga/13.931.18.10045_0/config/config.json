@@ -1,0 +1,55 @@
+
+{
+"buildVars": {
+"extensionId": "_ceMembers_@free.easypdfcombine.com",
+"configDefId": "222529105",
+"toolbarDisplayName": "EasyPDFCombine",
+"internalProductName": "EasyPDFCombine",
+"filenamePrefix": "ce",
+"version": "13.931.18.10045",
+"buildDate": "2020-06-02T21:19:40.468Z",
+"localStorageUrl": "https://easypdfcombine.dl.myway.com/blank.jhtml",
+"localStorageKeys": [],
+"downloadDomain": ".easypdfcombine.com",
+"searchDomain": "search.myway.com/search",
+"livePing": {
+"url": "https://live.tb.ask.com/tr.gif",
+"interval": 21600000
+},
+"toolbarDataTimeout": 3000,
+"pixelUrl": "https://easypdfcombine.dl.tb.ask.com/install_pixels.jhtml?partner=${partnerID}",
+"unifiedLoggingUrl": "https://anx.tb.ask.com/anx.gif",
+"newTabURL": "https://hp.myway.com/easypdfcombine/ttab02chr/index.html?p2=${partnerID}&n=${installDateHex}&st=tab&ptb=${toolbarID}&si=${partnerSubID}&cwsid=${cwsid}",
+"homepageURLForBabClick": "",
+"track": "TTAB02",
+"coId": "BSB",
+"uninstallSurveyUrl": " https://easypdfcombine.dl.myway.com/uninstall.jhtml?surveyUrl=https%253A%252F%252Fhp.myway.com%252Fuo%252Fo1%252Findex.html%253Fc%253D<!--toolbarID-->%2526ptb%253D<!--partnerID-->",
+"defaultPartnerId": "^BSB^chr999^TTAB02^",
+"contentScriptMatchPatterns": {
+    "extensionDetect": ".easypdfcombine.com",
+    "webTooltabAPIProxy": ".easypdfcombine.com"
+},
+"searchExtensionEnabled": true,
+"searchExtensionUrl": "https://ext.ask.com/index.jhtml?productName={{productName}}&installDate={{installDate}}&partnerId={{partnerID}}&si={{partnerSubID}}&tbGuid={{toolbarGUID}}&coId={{coID}}",
+"offerServiceConfigUrl": "",
+"loggingLevelConfigUrl": "https://download.easypdfcombine.com/images/download/static/native/notifications/{{cobrandID}}/{{trackID}}/logger-config.json",
+"babConfigUrl": "",
+"defaultLoggingLevel": {
+"default": "Info"
+},
+"babType": "newTab",
+"babRemoteScriptUrl": "",
+"notificationsEnabled": true,
+"pTagServiceUrl": "https://params.easypdfcombine.com/ptag",
+"surveyURL": "https://www.research.net/r/J3BQJ7F?ptb=${toolbarID}",
+"domainsToRedirectToNewTab": "hp.myway.com,hp.ask.com,hp.mysearch.com,hp.mywebsearch.com,hp.tb.ask.com,www1.hp.ask-tb.com,hsts.myway.com,hp.norton.myway.com,hp.forgebrowser.com",
+"isB2B": false
+},
+"csw": {
+"nativemessagingHostName": "com.mindspark.easypdfcombine_ce"
+},
+"widgets": [
+    ],
+"executablePackages": [
+    ]
+}

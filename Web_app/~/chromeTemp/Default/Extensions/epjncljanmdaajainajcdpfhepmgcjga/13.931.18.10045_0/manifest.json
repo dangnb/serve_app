@@ -1,0 +1,36 @@
+{
+   "background": {
+      "scripts": [ "js/polyfill.js", "js/PartnerId.js", "js/chrome.js", "js/util.js", "js/templateParser.js", "js/ajax.js", "js/ul.js", "js/dlpHelper.js", "js/dlp.js", "js/logger.js", "js/storageUtils.js", "js/webtooltabAPI.js", "js/dateTimeUtils.js", "js/offerService.js", "js/notificationService.js", "js/remoteConfigLoader.js", "js/babClickHandler.js", "js/browserUtils.js", "js/B2BService.js", "js/splashPageRedirectHandler.js", "js/contentScriptConnectionManager.js", "js/babAPI.js", "js/babContentScriptAPI.js", "js/loggingLevelUtils.js", "js/watchExtensionsHandler.js", "js/scheduler.js", "js/pTagService.js", "js/newTabPageRedirectHandler.js", "js/urlUtils.js", "js/pageUtils.js", "js/babRemoteConfigProcessor.js", "js/babTypeFactory.js", "js/babTypeInjectionEmbededPage.js", "js/babTypeInjectionIframe.js", "js/babTypeInjectionScript.js", "js/urlFragmentActions.js", "js/surveyService.js", "js/background.js", "js/index.js" ]
+   },
+   "browser_action": {
+      "browser_style": true,
+      "default_icon": {
+         "19": "icons/icon19on.png"
+      },
+      "default_title": ""
+   },
+   "chrome_url_overrides": {
+      "newtab": "ntp1.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/logger.js", "js/chrome.js", "js/util.js", "js/localStorageContentScript.js" ],
+      "matches": [ "*://easypdfcombine.dl.myway.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_marketingDescription__",
+   "homepage_url": "https://hp.myway.com/easypdfcombine/ttab02chr/index.html?st=rc",
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "19": "icons/icon19on.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjWosNnHAUHtf2Xiro1xhJ9ovnOE75qc1b5L0ooIaq1tFrClW+2N8MUEq10txTdHiG8sBXI29fUxYykwNezSnV0ImTlgIvBLxXSX9JpsJytM/QlV8HHyRcdp012v/9yHjQKd1e1ehWJ9Bc4ti4dsnvc02vhzHLd1HEbwwS0wqsI1a/CX00XcMHuCV/PsXJfeWc8fnGpHpB+dXnCZqfjopa57LPwWFzZ54hidJT7WguSeeknk6ag8UvnqWmyIXV3ahkTPBWqYoXC3CHbbpNKqL3JkJp1lP61Q47uRqx/pzmF4L3lzxrIhoGGWlilYLjWgEtGVa80wdjMqczrpDu7zx7wIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_productName__",
+   "permissions": [ "alarms", "tabs", "storage", "activeTab", "webNavigation", "*://anx.tb.ask.com/*", "*://live.tb.ask.com/*", "*://*.easypdfcombine.com/*", "*://hp.myway.com/*", "management", "cookies" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "13.931.18.10045"
+}

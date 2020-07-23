@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body {
+  max-height: 2000px !important;
+  background-color: beige;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.panel {
+  background-color: ghostwhite;
+  border-radius: 10px;
+}
+.panel-danger {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+h3 {
+  line-height: 64px;
+  padding-left: 10px;
+}
+.panel-header {
+  background-color: darkcyan;
+  border-radius: 5px;
+  height: 70px;
+}
+.btn-secondary {
+  margin: 16px 16px;
+}
+.custom-pagination .page-number {
+  display: inline-block;
+  /* padding: 5px 12px; */
+  background: #afffe6;
+  margin: 4px 4px;
+  border-radius: 10px;
+}
+
+.page-number.current {
+  background: #ffffff !important;
+  border: 2px solid #458873;
+}
+
+.page-number span {
+  display: block;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.pagination-previous,
+.pagination-next {
+  display: inline-block;
+  font-weight: bold;
+}
+.fa-trash-alt {
+  color: red !important;
+}
+p {
+  font-family: Lato;
+}
+.error-message {
+  color: red;
+}
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
+}

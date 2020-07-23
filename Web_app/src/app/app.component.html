@@ -1,0 +1,24 @@
+<!-- nav -->
+<div class="nav-wrapper">
+  <div class="container-fluid" *ngIf="currentUser">
+    <app-header></app-header>
+  </div>
+  <div class="container-fluid body">
+    <div class="row">
+      <div class="col-3">
+        <app-menu-left></app-menu-left>
+      </div>
+      <!-- main app container -->
+      <div class="col-9">
+        <div class="container100-padding">
+          <alert></alert>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="container100" *ngIf="currentUser == null">
+  <alert></alert>
+  <router-outlet></router-outlet>
+</div> -->

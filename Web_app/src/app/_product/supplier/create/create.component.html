@@ -1,0 +1,21 @@
+
+ <form novalidate  (ngSubmit)="addPost(rfCreateSupplier.value)" [formGroup]="rfCreateSupplier">
+    <h1>Login with your information</h1>
+            <div class="form-group">
+                <label for="name">Tên NCC</label>
+                <input id="name" type="text" class="form-control" name="name" placeholder="Enter Name" formControlName="name">
+                <p id="name"></p>
+            </div>
+            <div class="form-group">
+                <label for="code">Mã NCC:</label>
+                <input id="code" type="text" class="form-control" name="code" placeholder="Enter code" formControlName="code">
+                <p id="code"></p>
+            </div>
+            <div class="form-group">
+                <label for="address">Địa chỉ NCC:</label>
+                <input id="address" type="text" class="form-control" name="address" placeholder="Enter address" formControlName="address">
+                <p id="address"></p>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Lưu</button>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+</form>

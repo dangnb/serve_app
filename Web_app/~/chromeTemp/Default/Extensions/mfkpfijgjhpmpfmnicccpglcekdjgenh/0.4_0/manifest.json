@@ -1,0 +1,23 @@
+{
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": {
+         "17": "17.png"
+      }
+   },
+   "description": "Quick go to download page",
+   "icons": {
+      "128": "49.png",
+      "16": "49.png",
+      "48": "49.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgcZjH2Wzb3UDt+oggPQJ6qVRALo/OjPzmNJHt1YpNA6C+mZuMQEczkF2qH1IN9Aqlfhpk50H0mcK4yzkGpQh0XCDrOKGyydSaZU0eCC2edxcMiMeN4KQX3ZjFuxoxFVN75daNk4gf0cYsQUQYnSk3k7mMpsptGlSePro6oyHWX/zMm0VruodLVLbTX+oPhBlExaE7qQ4+z6tKLMmajrx6PDnTYe6Lx3MKmYeeaDscd5+KVsd4fHvGNN3z/taPgXFoYgyk2kcQlv67UGhGmNVUXQVMo8snEyH+/hVR1U+sJ6nk+dwMzMbDGxzSorzIXGhder22TCQGuNCqbD8IJI38QIDAQAB",
+   "manifest_version": 2,
+   "name": "QuickGoDownloads",
+   "permissions": [ "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.4"
+}

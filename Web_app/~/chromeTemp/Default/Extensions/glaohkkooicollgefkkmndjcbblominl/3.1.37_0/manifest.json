@@ -1,0 +1,25 @@
+{
+   "api_console_project_id": "789483738880",
+   "app": {
+      "background": {
+         "persistent": false,
+         "scripts": [ "background.js" ]
+      }
+   },
+   "container": "GOOGLE_DRIVE",
+   "description": "A Bitcoin wallet which runs in your browser.",
+   "icons": {
+      "128": "blockchain_b_blue_128.png",
+      "16": "favicon.ico",
+      "48": "blockchain_b_blue_48.png",
+      "64": "blockchain_b_blue_64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjoWZa4zGeynu9IjvmjHuQor9WaKJ1gBuAd5R3Knlbp8VvLZ3rYoPjnwISbVipqVfH/1725AvbN586fOZFUs6CeC+lp63bzKnJfsK4kP1A7d/+v9VllfEw44qaNbmwJr9zBCtn0XRxwRAz9zgW3GrK9sBFtkASBUA55vs0NSKH729j1DzISpDfkeFt5grprl9fEL475AEYLFr8/STYxYdq4M2kf2a63BxCORVcgcY8V3yRi30+R1aLKzlvRsYao/5WxDsO3PrijCbViJkUTaCm1No0aPlsFquve9e2k0VBaFZwTEuLWcwbySt/z8F3gfqQy9bKN49vJV3ZidZBgJXyQIDAQAB",
+   "manifest_version": 2,
+   "name": "Blockchain",
+   "offline_enabled": true,
+   "permissions": [ "https://blockchain.info/", "http://blockchain.info/", "*://*.blockchain.info/", "notifications", "unlimitedStorage", "storage", "webview", "videoCapture", "notifications" ],
+   "short_name": "Blockchain",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.1.37"
+}

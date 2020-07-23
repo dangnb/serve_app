@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="row header_main" style="background-color: darkcyan;">
+    <div class="col-7">
+      <h1>Hệ thống quán lý bán hàng</h1>
+    </div>
+    <div class="col-5 text-right">
+      <a class="nav-item nav-link" (click)="logout()"
+        ><a *ngIf="userCurrent != null">{{ userCurrent.fullName }}</a
+        ><i class="fas fa-chevron-down"></i> Logout</a
+      >
+    </div>
+  </div>
+</div>

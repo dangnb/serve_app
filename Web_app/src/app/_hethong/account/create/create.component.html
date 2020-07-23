@@ -1,0 +1,143 @@
+<div data-spy="scroll" style="height: 700px;">
+    <form (ngSubmit)="createAccount(accountService.form.value)" [formGroup]="accountService.form">
+        <div class="panel panel-default">
+            <div class="panel-header">
+                <div class="row">
+                    <div class="col-10">
+                        <span>{{
+              accountService.form.controls["id"].value ? "Cập nhật" : "Tạo mới"
+            }}</span>
+                        <span class="fill-remaining-space"></span>
+                    </div>
+                    <div class="col-2">
+                        <button style="float: right;" type="button" class="btn-dialog-close" (click)="onClose()"
+                            tabIndex="-1">
+                            <i class="fas fa-close"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="form-group" style="display: none;">
+                    <label for="id">Id</label>
+                    <input id="id" type="text" class="form-control" name="id" placeholder="Enter id"
+                        formControlName="id" />
+                    <p id="id"></p>
+                </div>
+                <div class="form-group" *ngIf=" accountService.form.controls['id'].value">
+                    <label for="userName">User name</label>
+                    <input id="userName" type="text" class="form-control" name="userName" placeholder="Enter userName"
+                        disabled formControlName="userName" />
+                    <p id="userName"></p>
+                </div>
+                <div class="form-group" *ngIf="!accountService.form.controls['id'].value">
+                    <label for="userName">User name</label>
+                    <input id="userName" type="text" class="form-control" name="userName" placeholder="Enter userName"
+                        formControlName="userName" />
+                    <p id="userName"></p>
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of accountService.error_messages.userName">
+                        <div class="error-message"
+                            *ngIf="accountService.form.get('userName').hasError(error.type) && (accountService.form.get('userName').dirty || accountService.form.get('userName').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="form-group">
+                    <label for="code">Mã :</label>
+                    <input id="code" type="text" class="form-control" name="code" placeholder="Enter code"
+                        formControlName="code" />
+                    <p id="code"></p>
+                </div>
+                <div class="form-group">
+                    <label for="fullName">Full Name :</label>
+                    <input id="fullName" type="text" class="form-control" name="fullName" placeholder="Enter fullName"
+                        formControlName="fullName" />
+                    <p id="fullName"></p>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input id="address" type="text" class="form-control" name="address" placeholder="Enter address"
+                        formControlName="address" />
+                    <p id="address"></p>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone number :</label>
+                    <input id="phoneNumber" type="text" class="form-control" name="phoneNumber"
+                        placeholder="Enter phone number" formControlName="phoneNumber" />
+                    <p id="phoneNumber"></p>
+                </div>
+                <div class="form-group">
+                    <label for="birtDay">Ngay sinh:</label>
+                    <input id="birtDay" type="date" class="form-control" name="birtDay" placeholder="Enter birt day"
+                        formControlName="birtDay" />
+                    <p id="birtDay"></p>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input id="email" type="text" class="form-control" name="email" placeholder="Enter email"
+                        formControlName="email" />
+                    <p id="email"></p>
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of accountService.error_messages.email">
+                        <div class="error-message"
+                            *ngIf="accountService.form.get('email').hasError(error.type) && (accountService.form.get('email').dirty || accountService.form.get('email').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password :</label>
+                    <input id="password" type="password" class="form-control" name="password"
+                        placeholder="Enter password" formControlName="password" required />
+                    <p id="password"></p>
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of accountService.error_messages.password">
+                        <div class="error-message"
+                            *ngIf="accountService.form.get('password').hasError(error.type) && (accountService.form.get('password').dirty || accountService.form.get('password').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password :</label>
+                    <input id="confirmPassword" type="password" class="form-control" name="confirmPassword"
+                        placeholder="Enter confirmPassword" formControlName="confirmPassword" />
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of accountService.error_messages.confirmPassword">
+                        <div class="error-message" *ngIf="
+                accountService.form
+                  .get('confirmPassword')
+                  .hasError(error.type) &&
+                (accountService.form.get('confirmPassword').dirty ||
+                  accountService.form.get('confirmPassword').touched)
+              ">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-8"></div>
+                        <div class="col-2">
+                            <button type="button" class="btn btn-default" (click)="onClose()">
+                                Close
+                            </button>
+                        </div>
+                        <div class="col-2">
+                            <button type="submit" class="btn btn-success form-control"
+                                [disabled]="!accountService.form.valid">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img *ngIf=" loading"
+                src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        </div>
+    </form>
+</div>
