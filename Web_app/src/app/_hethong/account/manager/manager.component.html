@@ -61,13 +61,14 @@
                 <thead>
                     <tr class="text-center">
                         <td>STT</td>
+                        <td>Tên đăng nhập</td>
                         <td>Tên</td>
                         <td>Địa chỉ</td>
                         <td>Ngày sinh</td>
                         <td>Người tạo</td>
                         <td>Ngày tạo</td>
-                        <td></td>
-                        <td></td>
+                        <td>Edit</td>
+                        <td>Delete</td>
                     </tr>
                 </thead>
                 <tbody *ngIf="check">
@@ -76,18 +77,20 @@
                   let i = index
                 ">
                         <td>{{ stt + i }}</td>
+                        <td>{{ item.userName }}</td>
                         <td>{{ item.fullName }}</td>
                         <td>{{ item.address }}</td>
                         <td>{{ item.birtDay | date: "dd/MM/yyyy" }}</td>
                         <td>{{ item.createdBy }}</td>
                         <td>{{ item.createdDate | date: "dd/MM/yyyy" }}</td>
-                        <td>
+                        <td class="text-center">
                             <a (click)="onEdit(item)">
                                 <mat-icon>launch</mat-icon>
                             </a>
                         </td>
-                        <td>
-                            <a (click)="delete(item)"><i class="fas fa-trash-alt"></i></a>
+                        <td class="text-center">
+                            <a *ngIf="item.userName!=accountService.curentUser.userName" (click)="delete(item)"><i
+                                    class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                 </tbody>

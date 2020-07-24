@@ -112,3 +112,12 @@ span {
 #toast-container {
   display: block !important;
 }
+.footer {
+  margin-top: 7px;
+  background-color: darkcyan;
+  height: 50px;
+  border-radius: 5px;
+}
+.footer > div {
+  line-height: 50px;
+}

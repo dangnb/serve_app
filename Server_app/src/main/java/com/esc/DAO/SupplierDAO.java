@@ -98,4 +98,9 @@ public class SupplierDAO extends AbstractHibernateDAO<SupplierBO> {
         criteria.add(Restrictions.eq("Name", name));
         return (SupplierBO) criteria.list().get(0);
     }
+     public SupplierBO GetByKey(int id) {
+        Criteria criteria = getCurrentSession().createCriteria(SupplierBO.class);
+        criteria.add(Restrictions.eq("supplierId", id));
+        return (SupplierBO) criteria.list().get(0);
+    }
 }

@@ -53,6 +53,11 @@ public class SupplierServiceImpl implements SupplierService{
          supplierDAO.update(supp);
     }
 
+    @Override
+    public SupplierBO GetByKey(int id) {
+        return supplierDAO.GetByKey(id);
+    }
+
     
     
 }

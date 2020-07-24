@@ -93,7 +93,9 @@ export class CategoryProductComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     dialogConfig.width = "60%";
-    this.dialog.open(CreateComponent, dialogConfig);
+    this.dialog.open(CreateComponent, dialogConfig).afterClosed().subscribe(res => {
+      this.getListSupplier(this.input);
+    });
   }
   onEdit(row) {
     this.categoryProductService.populateForm(row);
@@ -101,6 +103,8 @@ export class CategoryProductComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     dialogConfig.width = "60%";
-    this.dialog.open(CreateComponent, dialogConfig);
+    this.dialog.open(CreateComponent, dialogConfig).afterClosed().subscribe(res => {
+      this.getListSupplier(this.input);
+    });
   }
 }

@@ -1,8 +1,12 @@
-import { SupplierModel } from './supplier-model';
+import { NotificationService } from './../../../_shared/notification.service';
+import { ApiService } from './../../../_shared/api.service';
+import { MatDialogConfig, MatDialog } from '@angular/material';
+import { InputSearch } from './../../../_models/InputSearch';
+import { SupplierModel } from './../supplier-model';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { InputSearch } from './../../_models/InputSearch';
-import { ResultApi } from './../../_models/ResultAPI';
-import { SupplierService } from './supplier.service';
+import { ResultApi } from './../../../_models/ResultAPI';
+import { CreateComponent } from './../create/create.component';
+import { SupplierService } from './../supplier.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,7 +17,7 @@ import { Component, OnInit } from '@angular/core';
 export class SupplierComponent implements OnInit {
   public rfSearchSupplier: FormGroup;
   public result: ResultApi;
-  public input: InputSearch
+  public input: InputSearch;
   // array of all items to be paged
   collection = { count: 60, data: Array<SupplierModel>() };
   check: boolean = false;
@@ -36,7 +40,13 @@ export class SupplierComponent implements OnInit {
     screenReaderPageLabel: 'page',
     screenReaderCurrentLabel: `You're on page`
   };
-  constructor(private fb: FormBuilder, private supplierService: SupplierService) {
+  constructor(
+    private fb: FormBuilder,
+    private supplierService: SupplierService,
+    private dialog: MatDialog,
+    private service: ApiService,
+    private notificationService: NotificationService,
+  ) {
 
   }
   onPageChange(event) {
@@ -45,7 +55,6 @@ export class SupplierComponent implements OnInit {
   }
   async getListSupplier(input: InputSearch) {
     this.collection.data = new Array<SupplierModel>();
-
     input.position = this.config.currentPage * 10 - 10;
     input.pageSize = this.config.itemsPerPage;
     this.stt = input.position + 1;
@@ -61,14 +70,36 @@ export class SupplierComponent implements OnInit {
         this.check = true;
       });
   }
-  delete(value) {
-    this.supplierService.Delete(value).then(response => {
-      console.log("Thành công");
-      let input: InputSearch = new InputSearch();
-      this.getListSupplier(input);
-    }).catch(error => {
-      console.log(error);
-    })
+  onEdit(row) {
+    this.service.GetByKey(row.supplierId, "/Supplier/getByKey").subscribe(
+      (res) => {
+        this.supplierService.populateForm(res);
+      }
+    );
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "60%";
+    this.dialog.open(CreateComponent, dialogConfig).afterClosed().subscribe(res => {
+      this.getListSupplier(this.input);
+    });
+
+  }
+  delete(supplier) {
+    if (window.confirm(`Bạn muốn xóa nhà cung cấp" ${supplier.name}" không?`)) {
+      this.supplierService.Delete(supplier).then(response => {
+        console.log("Thành công");
+        this.input = new InputSearch();
+        this.getListSupplier(this.input);
+        this.notificationService.showSuccess("Xóa nhà cung cấp thành công")
+      }).catch(error => {
+        console.log(error);
+        this.notificationService.showError("Error", "Xóa nhà cung cấp thất bại")
+      })
+    } else {
+      console.log("Không xóa nhà cung cấp");
+    }
+
   }
   search(value) {
     console.log(value);
@@ -87,5 +118,14 @@ export class SupplierComponent implements OnInit {
     });
     this.input = new InputSearch();
     this.getListSupplier(this.input);
+  }
+  openCreate() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = "60%";
+    this.dialog.open(CreateComponent, dialogConfig).afterClosed().subscribe(res =>
+      this.getListSupplier(this.input)
+    );
   }
 }

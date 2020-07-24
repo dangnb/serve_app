@@ -66,7 +66,7 @@ public class CategoryProductController {
         }
     }
 
-    @RequestMapping(value = "/create", method = RequestMethod.PUT, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @RequestMapping(value = "/create", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     @ResponseBody
     public ResponseEntity<?> Create(@RequestBody CategoryProductBO supp) {
         OutputResult result = new OutputResult();

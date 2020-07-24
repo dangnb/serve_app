@@ -9,7 +9,6 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/_shared/api.service';
 import { CreateComponent } from '../create/create.component';
 import { AccountService } from '../account.service';
-import { timeout } from 'rxjs/operators';
 
 @Component({
   selector: 'app-manager',
@@ -45,7 +44,6 @@ export class ManagerComponent implements OnInit {
     private fb: FormBuilder,
     private dialog: MatDialog,
     private service: ApiService,
-    private alertService: AlertService,
     private accountService: AccountService,
     private notificationService: NotificationService) { }
 
@@ -105,10 +103,9 @@ export class ManagerComponent implements OnInit {
       (res) => {
         this.notificationService.showSuccess("Xóa tài khoản thành công");
         this.getListAccount(this.input);
-        setTimeout(() => { this.alertService.clear(); }, 1250);
       }
     ).catch(error => {
-      this.alertService.error("Xóa tài khoản thất bại");
+      this.notificationService.showError("Error", "Xóa tài khoản thất bại");
     });
   }
   onEdit(row) {

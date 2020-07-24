@@ -1,20 +1,23 @@
-import { Observable } from 'rxjs';
 import { FormControl, Validators, FormBuilder } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { TokenStorageService } from './../../_services/token-storage.service';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import * as _ from 'lodash';
+import { user } from 'src/app/_models';
 @Injectable({ providedIn: 'root' })
 export class AccountService {
     token: string;
-    constructor(private http: HttpClient,
+    curentUser: user;
+    constructor(
         private tokenStorageService: TokenStorageService,
-        public formBuilder: FormBuilder) {
+        public formBuilder: FormBuilder
+    ) {
         this.tokenStorageService.currentToken.subscribe(token => {
             this.token = token;
         });
-
+        this.tokenStorageService.currentUser.subscribe(user => {
+            this.curentUser = user;
+        });
     }
     form: FormGroup = this.formBuilder.group({
         id: new FormControl(),

@@ -1,5 +1,6 @@
+import { MaterialModule } from './../../material/material.module';
+import { SupplierComponent } from './manager/supplier.component';
 import { SupplierService } from './supplier.service';
-import { SupplierComponent } from './supplier.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,8 +8,7 @@ import { CreateComponent } from './create/create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 const router: Routes = [
-  { path: '', component: SupplierComponent },
-  { path: 'create', component: CreateComponent }
+  { path: '', component: SupplierComponent }
 ]
 
 
@@ -19,7 +19,9 @@ const router: Routes = [
     FormsModule,
     ReactiveFormsModule,
     NgxPaginationModule,
+    MaterialModule,
     RouterModule.forChild(router)
-  ], providers: [SupplierService]
+  ], providers: [SupplierService],
+  entryComponents: [CreateComponent,]
 })
 export class SupplierModule { }

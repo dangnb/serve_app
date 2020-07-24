@@ -18,12 +18,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { MenuLeftComponent } from './menu-left/menu-left.component';
 import { HeaderComponent } from './header/header.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ChangeTextDirective } from './change-text.directive';
 import { BnNgIdleService } from 'bn-ng-idle';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,9 +31,9 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
     NotFoundComponent,
     HomeComponent,
     AlertComponent,
-    MenuLeftComponent,
     HeaderComponent,
     ChangeTextDirective,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

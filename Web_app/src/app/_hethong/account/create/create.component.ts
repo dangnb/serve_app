@@ -20,7 +20,6 @@ export class CreateComponent implements OnInit {
     public dialogRef: MatDialogRef<CreateComponent>,
     private service: ApiService,
     private authen: AuthenticationService,
-    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -32,7 +31,6 @@ export class CreateComponent implements OnInit {
     this.dialogRef.close();
   }
   createAccount(value) {
-    debugger;
     if (value.id > 0 || value.id == null || value.id == "") {
       value.createdDate = new Date;
       value.status = true;

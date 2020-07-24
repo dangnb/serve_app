@@ -12,8 +12,6 @@ const routes: Routes = [
     loadChildren: () => import('./category-product/category-product.module').then(m => m.CategoryProductModule), canActivate: [AuthGuard]
   }
 ];
-
-
 @NgModule({
   declarations: [],
   imports: [
