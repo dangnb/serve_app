@@ -31,7 +31,7 @@ export class CreateComponent implements OnInit {
     this.dialogRef.close();
   }
   createAccount(value) {
-    if (value.id > 0 || value.id == null || value.id == "") {
+    if (value.id == 0 || value.id == null || value.id == "") {
       value.createdDate = new Date;
       value.status = true;
       value.createdBy = this.authen.currentUserValue.userName;

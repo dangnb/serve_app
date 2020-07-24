@@ -90,7 +90,7 @@ public class CategoryProductController {
         }
     }
 
-    @RequestMapping(value = "/delete", method = RequestMethod.PUT, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @RequestMapping(value = "/delete", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     @ResponseBody
     public ResponseEntity<?> delete(@RequestBody CategoryProductBO supp) {
         OutputResult result = new OutputResult();
@@ -115,7 +115,7 @@ public class CategoryProductController {
         }
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.PUT, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @RequestMapping(value = "/update", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     @ResponseBody
     public ResponseEntity<?> update(@RequestBody CategoryProductBO supp) {
         OutputResult result = new OutputResult();

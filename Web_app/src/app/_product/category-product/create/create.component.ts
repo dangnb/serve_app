@@ -17,13 +17,11 @@ export class CreateComponent implements OnInit {
   constructor(
     private service: ApiService,
     private authenticationService: AuthenticationService,
-    private alertService: AlertService,
     private categoryProductService: CategoryProductService,
     private notificationService: NotificationService,
     public dialogRef: MatDialogRef<CreateComponent>) { }
 
   ngOnInit() {
-    this.alertService.clear();
   }
   onClose() {
     this.categoryProductService.form.reset();
@@ -31,7 +29,7 @@ export class CreateComponent implements OnInit {
     this.dialogRef.close();
   }
   addPost(categoryProduct) {
-    if (categoryProduct.id > 0 || categoryProduct.id == null || categoryProduct.id == "") {
+    if (categoryProduct.id == 0 || categoryProduct.id == null || categoryProduct.id == "") {
       categoryProduct.createdDate = new Date;
       categoryProduct.status = true;
       categoryProduct.createdBy = this.authenticationService.currentUserValue.userName;
@@ -49,7 +47,6 @@ export class CreateComponent implements OnInit {
         }
       }).catch(error => {
         console.log();
-        this.alertService.error(error);
       });
     } else {
       this.service.CreateOrUpdate(categoryProduct, "/CategoryProduct/update").then((result) => {
@@ -64,7 +61,6 @@ export class CreateComponent implements OnInit {
         }
       }).catch(error => {
         console.log();
-        this.alertService.error(error);
       });
     }
   }
