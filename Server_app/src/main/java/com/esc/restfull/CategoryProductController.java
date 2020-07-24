@@ -76,7 +76,7 @@ public class CategoryProductController {
             } else {
                 ErrorMesage err = new ErrorMesage();
                 err.setErrorCode("ERR");
-                err.setDepcription("Tạo danh mục sản phẩm thất bại");
+                err.setDescription("Tạo danh mục sản phẩm thất bại");
                 result.setErr(err);
                 return ResponseEntity.ok(result);
             }
@@ -84,7 +84,7 @@ public class CategoryProductController {
             logger.error(e);
             ErrorMesage err = new ErrorMesage();
             err.setErrorCode("ERR");
-            err.setDepcription(e.getMessage());
+            err.setDescription(e.getMessage());
             result.setErr(err);
             return ResponseEntity.ok(result);
         }
@@ -101,7 +101,7 @@ public class CategoryProductController {
             } else {
                 ErrorMesage err = new ErrorMesage();
                 err.setErrorCode("ERR");
-                err.setDepcription("Xóa danh mục sản phẩm thất bại");
+                err.setDescription("Xóa danh mục sản phẩm thất bại");
                 result.setErr(err);
                 return ResponseEntity.ok(result);
             }
@@ -109,7 +109,7 @@ public class CategoryProductController {
             logger.error(e);
             ErrorMesage err = new ErrorMesage();
             err.setErrorCode("ERR");
-            err.setDepcription(e.getMessage());
+            err.setDescription(e.getMessage());
             result.setErr(err);
             return ResponseEntity.ok(result);
         }
@@ -125,7 +125,7 @@ public class CategoryProductController {
             } else {
                 ErrorMesage err = new ErrorMesage();
                 err.setErrorCode("ERR");
-                err.setDepcription("Cập nhật danh mục sản phẩm thất bại");
+                err.setDescription("Cập nhật danh mục sản phẩm thất bại");
                 result.setErr(err);
                 return ResponseEntity.ok(result);
             }

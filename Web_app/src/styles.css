@@ -12,10 +12,12 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 .panel {
-  background-color: ghostwhite;
+  background-color: weight;
   border-radius: 10px;
+}
+.panel-default {
+  background-color: ghostwhite;
 }
 .panel-danger {
   margin-top: 10px;
@@ -38,7 +40,7 @@ h3 {
   /* padding: 5px 12px; */
   background: #afffe6;
   margin: 4px 4px;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 .page-number.current {
@@ -82,4 +84,31 @@ form {
 }
 button {
   margin: 5px !important;
+}
+.panel {
+  background-color: weight !important;
+}
+.modal-content {
+  background-color: ghostwhite;
+}
+.modal-header,
+.modal-footer {
+  max-height: 58px !important;
+  background-color: darkcyan;
+}
+.header {
+  background-color: darkcyan;
+}
+.modal-title {
+  line-height: -1px;
+}
+.config-footer {
+  margin-top: 100px;
+}
+span {
+  text-align: center;
+}
+
+#toast-container {
+  display: block !important;
 }

@@ -1,3 +1,4 @@
+import { NotificationService } from './../../../_shared/notification.service';
 import { AlertService } from './../../../_services/alert.service';
 import { AccountModel } from './../account.model';
 import { ResultApi } from './../../../_models/ResultAPI';
@@ -45,7 +46,8 @@ export class ManagerComponent implements OnInit {
     private dialog: MatDialog,
     private service: ApiService,
     private alertService: AlertService,
-    private accountService: AccountService) { }
+    private accountService: AccountService,
+    private notificationService: NotificationService) { }
 
   ngOnInit() {
     this.rfSearch = this.fb.group({
@@ -101,7 +103,7 @@ export class ManagerComponent implements OnInit {
     debugger;
     this.service.Delete(value, "/account/delete").then(
       (res) => {
-        this.alertService.success("Xóa tài khoản thành công");
+        this.notificationService.showSuccess("Xóa tài khoản thành công");
         this.getListAccount(this.input);
         setTimeout(() => { this.alertService.clear(); }, 1250);
       }

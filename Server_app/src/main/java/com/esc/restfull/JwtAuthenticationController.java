@@ -49,7 +49,7 @@ public class JwtAuthenticationController {
         if(StringUtils.isNullOrEmpty(account)){
             ErrorMesage err= new ErrorMesage();
             err.setErrorCode("Authennicate");
-            err.setDepcription("Login faile");
+            err.setDescription("Login faile");
             result.setErr(err);
             return ResponseEntity.ok(result);
         }

@@ -21,11 +21,13 @@ public class ErrorMesage {
         this.errorCode = ErrorCode;
     }
 
-    public String getDepcription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDepcription(String Depcription) {
-        this.description = Depcription;
+    public void setDescription(String description) {
+        this.description = description;
     }
+
+ 
 }

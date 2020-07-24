@@ -60,7 +60,7 @@ public class SupplierController {
             logger.error(e);
             ErrorMesage err= new ErrorMesage();
             err.setErrorCode("ERR");
-            err.setDepcription(e.getMessage());
+            err.setDescription(e.getMessage());
             result.setErr(err);
             return ResponseEntity.ok(result);
         }

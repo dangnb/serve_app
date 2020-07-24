@@ -1,10 +1,3 @@
-#he {
-  max-height: 2000 !important;
-}
-router-outlet {
-  max-height: 2000px !important;
-}
-
 .body {
   padding-top: 10px;
 }
@@ -36,4 +29,7 @@ router-outlet {
 }
 .fa-trash-alt {
   color: red !important;
+}
+.body {
+  margin-top: 7px;
 }

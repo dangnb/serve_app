@@ -1,3 +1,4 @@
+import { NotificationService } from './_shared/notification.service';
 import { ApiService } from './_shared/api.service';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -5,7 +6,6 @@ import { HomeModule } from './home/home.module';
 import { AlertComponent } from './_components/alert.component';
 import { ErrorInterceptor } from './hepers/error.interceptor';
 import { JwtInterceptor } from './hepers/jwt.interceptor';
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -23,6 +23,7 @@ import { HeaderComponent } from './header/header.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ChangeTextDirective } from './change-text.directive';
 import { BnNgIdleService } from 'bn-ng-idle';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,13 +43,16 @@ import { BnNgIdleService } from 'bn-ng-idle';
     FormsModule,
     MaterialModule,
     NgxPaginationModule,
-    BrowserAnimationsModule, //
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     BnNgIdleService,
     ApiService,
+    ToastrService,
+    NotificationService
   ],
   bootstrap: [AppComponent],
 })

@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.tokenStorageService.currentUser.subscribe(data => {
       this.userCurrent = data;
-      console.log("full name: " + this.userCurrent.fullName);
     });
   }
   logout() {
@@ -26,6 +25,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/login']);
   }
   ngAfterViewInit() {
+    this.tokenStorageService.currentUser.subscribe(data => {
+      this.userCurrent = data;
+    });
   }
 
 }

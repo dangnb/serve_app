@@ -79,7 +79,7 @@ public class AccountController {
             if(accountService.GetByUserName(acc.getUserName())!=null){
                  ErrorMesage err = new ErrorMesage();
                 err.setErrorCode("Error");
-                err.setDepcription("Tải khoản đã tồn tại trên hệ thống");
+                err.setDescription("Tải khoản đã tồn tại trên hệ thống");
                 result.setErr(err);
                 return ResponseEntity.ok(result);
             }
@@ -89,7 +89,7 @@ public class AccountController {
             } else {
                 ErrorMesage err = new ErrorMesage();
                 err.setErrorCode("Error");
-                err.setDepcription("Create account false");
+                err.setDescription("Create account false");
                 result.setErr(err);
                 return ResponseEntity.ok(result);
             }
@@ -109,7 +109,7 @@ public class AccountController {
             } else {
                 ErrorMesage err = new ErrorMesage();
                 err.setErrorCode("Error");
-                err.setDepcription("Update account false");
+                err.setDescription("Update account false");
                 result.setErr(err);
                 return ResponseEntity.ok(result);
             }
@@ -129,7 +129,7 @@ public class AccountController {
             } else {
                 ErrorMesage err = new ErrorMesage();
                 err.setErrorCode("Error");
-                err.setDepcription("Update account false");
+                err.setDescription("Update account false");
                 result.setErr(err);
                 return ResponseEntity.ok(result);
             }
