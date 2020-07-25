@@ -79,9 +79,10 @@ public class CategoryProductServiceImpl implements CategoryProductService {
     }
 
     @Override
-    public int Delete(CategoryProductBO cP) {
+    public int Delete(int id) {
         try {
-            categoryProductDAO.update(cP);
+            CategoryProductBO cate=categoryProductDAO.GetById(id);
+            categoryProductDAO.delete(cate);
             return 1;
         } catch (Exception e) {
             logger.error(e);

@@ -24,7 +24,7 @@ public class CategoryProductBO implements java.io.Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID", nullable = true)
-    private Long Id;
+    private int Id;
     
     @Column(name="CODE" ,nullable = true)
     private String code;
@@ -47,11 +47,11 @@ public class CategoryProductBO implements java.io.Serializable{
     @Column(name="Email" ,nullable = true)
     private String email;
 
-    public Long getId() {
+    public int getId() {
         return Id;
     }
 
-    public void setId(Long Id) {
+    public void setId(int Id) {
         this.Id = Id;
     }
 

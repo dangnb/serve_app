@@ -1,3 +1,4 @@
+import { NotificationService } from './../../../_shared/notification.service';
 import { CategoryproductModel } from './../CategoryProduct-model';
 import { CreateComponent } from './../create/create.component';
 import { CategoryProductService } from '../category.product.service';
@@ -7,6 +8,7 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material'
 import { createComponent } from '@angular/compiler/src/core';
+import { ApiService } from 'src/app/_shared/api.service';
 
 @Component({
   selector: 'app-category-product',
@@ -37,7 +39,13 @@ export class CategoryProductComponent implements OnInit {
     screenReaderPageLabel: 'page',
     screenReaderCurrentLabel: `You're on page`
   };
-  constructor(private categoryProductService: CategoryProductService, private fb: FormBuilder, private dialog: MatDialog) { }
+  constructor(
+    private categoryProductService: CategoryProductService,
+    private fb: FormBuilder,
+    private dialog: MatDialog,
+    private service: ApiService,
+    private noise: NotificationService
+  ) { }
 
   ngOnInit() {
     this.rfSearch = this.fb.group({
@@ -80,15 +88,15 @@ export class CategoryProductComponent implements OnInit {
     this.getListSupplier(this.input);
   }
   delete(value) {
-    this.categoryProductService.Delete(value).then(response => {
-      console.log("Thành công");
-      let input: InputSearch = new InputSearch();
-      this.getListSupplier(input);
+    debugger;
+    this.service.Delete(value, "/CategoryProduct/delete").then(response => {
+      this.getListSupplier(this.input);
+      this.noise.showSuccess("Xóa danh mục sản phẩm thành công");
     }).catch(error => {
       console.log(error);
     })
   }
-  openCreate(aa) {
+  openCreate() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
@@ -97,14 +105,16 @@ export class CategoryProductComponent implements OnInit {
       this.getListSupplier(this.input);
     });
   }
-  onEdit(row) {
-    this.categoryProductService.populateForm(row);
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    dialogConfig.width = "60%";
-    this.dialog.open(CreateComponent, dialogConfig).afterClosed().subscribe(res => {
-      this.getListSupplier(this.input);
+  onEdit(categoryProduct) {
+    this.service.GetByKey(categoryProduct.id, "/CategoryProduct/getById").subscribe(res => {
+      this.categoryProductService.populateForm(categoryProduct);
+      const dialogConfig = new MatDialogConfig();
+      dialogConfig.disableClose = true;
+      dialogConfig.autoFocus = true;
+      dialogConfig.width = "60%";
+      this.dialog.open(CreateComponent, dialogConfig).afterClosed().subscribe(res => {
+        this.getListSupplier(this.input);
+      });
     });
   }
 }

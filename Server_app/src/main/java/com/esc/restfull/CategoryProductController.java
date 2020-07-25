@@ -21,6 +21,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -66,12 +67,12 @@ public class CategoryProductController {
         }
     }
 
-    @RequestMapping(value = "/create", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @RequestMapping(value = "/create", method = RequestMethod.POST, produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     @ResponseBody
     public ResponseEntity<?> Create(@RequestBody CategoryProductBO supp) {
         OutputResult result = new OutputResult();
         try {
-            if (categoryProductService.Delete(supp) == 1) {
+            if (categoryProductService.Create(supp) == 1) {
                 return ResponseEntity.ok(result);
             } else {
                 ErrorMesage err = new ErrorMesage();
@@ -90,13 +91,12 @@ public class CategoryProductController {
         }
     }
 
-    @RequestMapping(value = "/delete", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @RequestMapping(value = "/delete", method = RequestMethod.POST, produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     @ResponseBody
-    public ResponseEntity<?> delete(@RequestBody CategoryProductBO supp) {
+    public ResponseEntity<?> delete(@RequestParam("id") int id) {
         OutputResult result = new OutputResult();
         try {
-            supp.setStatus(false);
-            if (categoryProductService.Delete(supp) == 1) {
+            if (categoryProductService.Delete(id) == 1) {
                 return ResponseEntity.ok(result);
             } else {
                 ErrorMesage err = new ErrorMesage();
@@ -115,7 +115,7 @@ public class CategoryProductController {
         }
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @RequestMapping(value = "/update", method = RequestMethod.POST, produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     @ResponseBody
     public ResponseEntity<?> update(@RequestBody CategoryProductBO supp) {
         OutputResult result = new OutputResult();

@@ -98,7 +98,6 @@ export class ManagerComponent implements OnInit {
     );
   }
   delete(value) {
-    debugger;
     this.service.Delete(value, "/account/delete").then(
       (res) => {
         this.notificationService.showSuccess("Xóa tài khoản thành công");

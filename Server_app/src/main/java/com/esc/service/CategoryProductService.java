@@ -19,5 +19,5 @@ public interface CategoryProductService {
     CategoryProductBO getById(int id);
     int Create(CategoryProductBO cP);
     int Update(CategoryProductBO cP);
-    int Delete(CategoryProductBO cP);
+    int Delete(int id);
 }

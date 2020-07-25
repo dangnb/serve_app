@@ -55,7 +55,7 @@ export class CategoryProductService {
                 Authorization: `Bearer  ${this.token}`
             }
         }).pipe(
-            tap(response => console.log(`response: ${JSON.stringify(response)}`)),
+            tap(response => response),
             catchError(error => of([]))
         );
     }
