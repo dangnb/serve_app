@@ -121,3 +121,6 @@ span {
 .footer > div {
   line-height: 50px;
 }
+.modal-content {
+  margin-top: -11px;
+}

@@ -14,10 +14,16 @@ import java.util.List;
  * @author nguye
  */
 public interface CategoryProductService {
+
     List<CategoryProductBO> getListAll(InputSearch input);
+
     int getTotal(InputSearch input);
+
     CategoryProductBO getById(int id);
+
     int Create(CategoryProductBO cP);
+
     int Update(CategoryProductBO cP);
+
     int Delete(int id);
 }

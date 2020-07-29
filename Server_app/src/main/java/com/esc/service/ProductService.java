@@ -5,7 +5,7 @@
  */
 package com.esc.service;
 
-import com.esc.BO.AccountBO;
+import com.esc.BO.ProductBO;
 import com.esc.model.InputSearch;
 import java.util.List;
 
@@ -13,19 +13,15 @@ import java.util.List;
  *
  * @author nguye
  */
-public interface AccountService {
+public interface ProductService {
 
-    List<AccountBO> getListAccountBO(InputSearch input);
+    List<ProductBO> getAllProducts(InputSearch input);
 
     int getTotal(InputSearch input);
 
-    AccountBO GetByUserName(String userName);
+    ProductBO GetByKey(int id);
 
-    AccountBO getByKey(int id);
+    void Create(ProductBO pro);
 
-    int Create(AccountBO acc);
-
-    int Update(AccountBO acc);
-
-    int Delete(int id);
+    void Update(ProductBO pro);
 }

@@ -46,8 +46,8 @@ public class JwtAuthenticationController {
         OutputResult result = new OutputResult();
         AccountDAO accountDao = AppContext.getBean(AccountDAO.class);
         AccountBO account = accountDao.GetAccountByUserName(authenticationRequest.getUsername());
-        if(StringUtils.isNullOrEmpty(account)){
-            ErrorMesage err= new ErrorMesage();
+        if (StringUtils.isNullOrEmpty(account)) {
+            ErrorMesage err = new ErrorMesage();
             err.setErrorCode("Authennicate");
             err.setDescription("Login faile");
             result.setErr(err);
@@ -55,7 +55,7 @@ public class JwtAuthenticationController {
         }
         authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
         final UserDetails userDetails = userDetailsService
-                .loadUserByUsernameInDB(authenticationRequest.getUsername(),account);
+                .loadUserByUsernameInDB(authenticationRequest.getUsername(), account);
         final String token = jwtTokenUtil.generateToken(userDetails);
         result.setJwrRes(new JwtResponse(token, account));
         return ResponseEntity.ok(result);

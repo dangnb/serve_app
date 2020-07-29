@@ -14,10 +14,16 @@ import java.util.List;
  * @author nguye
  */
 public interface SupplierService {
+
     List<SupplierBO> getListSupplierBO(InputSearch input);
+
     int getTotal(InputSearch input);
+
     SupplierBO GetByUserName(String name);
+
     SupplierBO GetByKey(int id);
+
     void Create(SupplierBO supp);
+
     void Update(SupplierBO supp);
 }
