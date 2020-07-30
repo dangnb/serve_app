@@ -5,16 +5,13 @@
  */
 package com.esc.restfull;
 
-import com.esc.model.InputSearch;
 import com.esc.model.OutputResult;
-import static com.esc.restfull.SupplierController.logger;
 import com.esc.service.MenuService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
