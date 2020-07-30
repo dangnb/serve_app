@@ -1,3 +1,4 @@
+import { user } from './../_models/user';
 import { ResultApi } from './../_models/ResultAPI';
 import { environment } from './../../environments/environment.prod';
 import { TokenStorageService } from './../_services/token-storage.service';
@@ -68,5 +69,24 @@ export class ApiService {
                 return null;
             });
         return promise;
+    }
+    getmenu(urlApi: string): Observable<any> {
+        this.tokenStorageService.currentToken.subscribe(token => {
+            this.token = token;
+        });
+        let user: user;
+        this.tokenStorageService.currentUser.subscribe(repos => {
+            user = repos;
+        })
+        let url = environment.url + urlApi;
+        return this.http.post<ResultApi>(url, null, {
+            params: {
+                userName: user.userName,
+                Authorization: `Bearer  ${this.token}`
+            }
+        }).pipe(
+            tap(response => console.log(`response: ${JSON.stringify(response)}`)),
+            catchError(error => of([]))
+        );
     }
 }

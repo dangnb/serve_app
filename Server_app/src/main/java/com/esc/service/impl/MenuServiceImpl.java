@@ -22,8 +22,8 @@ public class MenuServiceImpl implements MenuService{
     public MenuDAO menuDAO;
     
     @Override
-    public List<MenuBO> GetList() {
-        return menuDAO.GetList();
+    public List<MenuBO> GetList(String userName) {
+        return menuDAO.GetList(userName);
     }
     
 }

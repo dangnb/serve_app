@@ -17,28 +17,18 @@ import javax.persistence.Table;
  * @author nguye
  */
 @Entity
-@Table(name = "Menu")
-public class MenuBO implements java.io.Serializable {
-
+@Table(name = "permission")
+public class PermissionBO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID", nullable = true)
     private int id;
-
-    @Column(name = "NAME", nullable = true)
-    private String name;
-
-    @Column(name = "PATH", nullable = true)
-    private String path;
-
+    
+    @Column(name = "ROLEID", nullable = true)
+    private int roleId;
+    
     @Column(name = "MENUID", nullable = true)
     private int menuId;
-
-    @Column(name = "LOCATION", nullable = true)
-    private int cocation;
-    
-     @Column(name = "STATUS", nullable = true)
-    private  boolean status;
 
     public int getId() {
         return id;
@@ -48,20 +38,12 @@ public class MenuBO implements java.io.Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public int getRoleId() {
+        return roleId;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPath() {
-        return path;
-    }
-
-    public void setPath(String path) {
-        this.path = path;
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
     }
 
     public int getMenuId() {
@@ -71,22 +53,5 @@ public class MenuBO implements java.io.Serializable {
     public void setMenuId(int menuId) {
         this.menuId = menuId;
     }
-
-    public int getCocation() {
-        return cocation;
-    }
-
-    public void setCocation(int cocation) {
-        this.cocation = cocation;
-    }
-
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
-    
     
 }

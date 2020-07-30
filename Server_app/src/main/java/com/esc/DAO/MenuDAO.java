@@ -20,9 +20,10 @@ import org.springframework.stereotype.Repository;
 @Transactional
 public class MenuDAO extends AbstractHibernateDAO<MenuBO> implements java.io.Serializable {
 
-    public List<MenuBO> GetList() {
+    public List<MenuBO> GetList(String userName) {
+        StringBuilder string = new StringBuilder();
         Criteria criteria = getCurrentSession().createCriteria(MenuBO.class);
-        criteria.add(Restrictions.eq("supplierId", 1));
+        criteria.add(Restrictions.eq("status", true));
         return criteria.list();
     }
 }

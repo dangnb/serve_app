@@ -111,7 +111,6 @@ export class ManagerComponent implements OnInit {
     console.log(row);
     this.service.GetByKey(row.id, "/account/getByKey").subscribe(
       (res) => {
-        console.log(res);
         this.accountService.populateForm(res);
       }
     );

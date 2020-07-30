@@ -13,5 +13,5 @@ import java.util.List;
  * @author nguye
  */
 public interface MenuService {
-    List<MenuBO> GetList();
+    List<MenuBO> GetList(String userName);
 }

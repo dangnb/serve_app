@@ -24,24 +24,16 @@
     <!-- Links -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            Hệ thống
+        <li class="nav-item dropdown" *ngFor="let item of listMenu">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" *ngIf="!item.path">
+            {{item.name}}
           </a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" routerLink="/hethong/account">Quán lý user</a>
+            <div *ngFor="let menu of listMenu">
+              <a class="dropdown-item" routerLink="{{menu.path}}" *ngIf="menu.menuId==item.id">{{menu.name}}</a>
+            </div>
           </div>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            Quản lý sản phẩm
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" routerLink="/product">Danh mục nhà cung cấp</a>
-            <a class="dropdown-item" routerLink="/product/category-product">Danh mục sản phẩm</a>
-          </div>
-        </li>
-
         <!-- Dropdown -->
         <li class="nav-item">
           <a class="nav-link" (click)="logout()">Logout</a>
