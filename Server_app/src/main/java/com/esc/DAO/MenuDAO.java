@@ -8,8 +8,7 @@ package com.esc.DAO;
 import com.esc.BO.MenuBO;
 import java.util.List;
 import javax.transaction.Transactional;
-import org.hibernate.Criteria;
-import org.hibernate.criterion.Restrictions;
+import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -22,8 +21,14 @@ public class MenuDAO extends AbstractHibernateDAO<MenuBO> implements java.io.Ser
 
     public List<MenuBO> GetList(String userName) {
         StringBuilder string = new StringBuilder();
-        Criteria criteria = getCurrentSession().createCriteria(MenuBO.class);
-        criteria.add(Restrictions.eq("status", true));
-        return criteria.list();
+        string.append("select mu from MenuBO mu where mu.id in "
+                + "(select menuId as id from  PermissionBO where roleId in "
+                + "(select roleId as roleId from RoleBO where roleId in ("
+                + "select roleId as roleId from UserRoleBO where userId in ("
+                + "select id as roleId from  AccountBO where userName= :userName))))");
+        Query query = getCurrentSession().createQuery(string.toString());
+        query.setParameter("userName", userName);
+        List<MenuBO> list = query.list();
+        return list;
     }
 }

@@ -10,6 +10,7 @@ import com.esc.DAO.MenuDAO;
 import com.esc.service.MenuService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,13 +18,14 @@ import org.springframework.stereotype.Service;
  * @author nguye
  */
 @Service
-public class MenuServiceImpl implements MenuService{
+public class MenuServiceImpl implements MenuService {
+
     @Autowired
     public MenuDAO menuDAO;
-    
+
     @Override
+    @Cacheable("MenuBO")
     public List<MenuBO> GetList(String userName) {
         return menuDAO.GetList(userName);
     }
-    
 }
