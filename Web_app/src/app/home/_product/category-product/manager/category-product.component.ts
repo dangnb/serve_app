@@ -1,14 +1,14 @@
-import { NotificationService } from './../../../_shared/notification.service';
-import { CategoryproductModel } from './../CategoryProduct-model';
 import { CreateComponent } from './../create/create.component';
 import { CategoryProductService } from '../category.product.service';
-import { ResultApi } from './../../../_models/ResultAPI';
-import { InputSearch } from './../../../_models/InputSearch';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material'
 import { createComponent } from '@angular/compiler/src/core';
 import { ApiService } from 'src/app/_shared/api.service';
+import { InputSearch } from 'src/app/_models/InputSearch';
+import { ResultApi } from 'src/app/_models/ResultAPI';
+import { CategoryproductModel } from '../CategoryProduct-model';
+import { NotificationService } from 'src/app/_shared/notification.service';
 
 @Component({
   selector: 'app-category-product',

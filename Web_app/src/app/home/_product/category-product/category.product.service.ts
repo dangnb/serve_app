@@ -1,13 +1,13 @@
-import { environment } from './../../../environments/environment';
+import { environment } from './../../../../environments/environment';
 import { Validators } from '@angular/forms';
 import { tap, catchError } from 'rxjs/operators';
-import { ResultApi } from '../../_models/ResultAPI';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { TokenStorageService } from '../../_services/token-storage.service';
 import { Injectable } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import * as _ from 'lodash';
+import { TokenStorageService } from 'src/app/_services';
+import { ResultApi } from 'src/app/_models/ResultAPI';
 @Injectable({ providedIn: 'root' })
 export class CategoryProductService {
     private token: string;

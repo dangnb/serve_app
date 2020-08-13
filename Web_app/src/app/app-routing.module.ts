@@ -1,22 +1,15 @@
 import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './hepers';
 import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
   {
-    path: 'product',
-    loadChildren: () => import('./_product/product.module').then(m => m.ProductModule)
-    , canActivate: [AuthGuard],
-  },
-  {
-    path: 'hethong',
-    loadChildren: () => import('./_hethong/hethong.module').then(m => m.HeThongModule)
+    path: '',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
     , canActivate: [AuthGuard],
   },
   { path: 'login', component: LoginComponent },
-  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: '**', component: NotFoundComponent }
 ];
 

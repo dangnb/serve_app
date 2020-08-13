@@ -1,9 +1,9 @@
 import { FormControl, Validators, FormBuilder } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
-import { TokenStorageService } from './../../_services/token-storage.service';
 import { Injectable } from '@angular/core';
 import * as _ from 'lodash';
 import { user } from 'src/app/_models';
+import { TokenStorageService } from 'src/app/_services';
 @Injectable({ providedIn: 'root' })
 export class AccountService {
     token: string;

@@ -1,13 +1,13 @@
-import { NotificationService } from './../../../_shared/notification.service';
-import { ApiService } from './../../../_shared/api.service';
-import { MatDialogConfig, MatDialog } from '@angular/material';
-import { InputSearch } from './../../../_models/InputSearch';
 import { SupplierModel } from './../supplier-model';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
-import { ResultApi } from './../../../_models/ResultAPI';
 import { CreateComponent } from './../create/create.component';
 import { SupplierService } from './../supplier.service';
 import { Component, OnInit } from '@angular/core';
+import { ResultApi } from 'src/app/_models/ResultAPI';
+import { InputSearch } from 'src/app/_models/InputSearch';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { ApiService } from 'src/app/_shared/api.service';
+import { NotificationService } from 'src/app/_shared/notification.service';
 
 @Component({
   selector: 'app-supplier',

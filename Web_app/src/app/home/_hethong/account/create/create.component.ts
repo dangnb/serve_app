@@ -1,11 +1,10 @@
 import { Router } from '@angular/router';
-import { AuthenticationService } from './../../../_services/authentication.service';
 import { MatDialogRef } from '@angular/material';
-import { NotificationService } from './../../../_shared/notification.service';
-import { AlertService } from './../../../_services/alert.service';
 import { AccountService } from './../account.service';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/_shared/api.service';
+import { NotificationService } from 'src/app/_shared/notification.service';
+import { AlertService, AuthenticationService } from 'src/app/_services';
 
 @Component({
   selector: 'app-create',

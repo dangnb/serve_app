@@ -1,8 +1,8 @@
-import { ResultApi } from './../../_models/ResultAPI';
-import { InputSearch } from './../../_models/InputSearch';
 import { FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { RoleModel } from './role.model';
+import { ResultApi } from 'src/app/_models/ResultAPI';
+import { InputSearch } from 'src/app/_models/InputSearch';
 
 @Component({
   selector: 'app-permission',

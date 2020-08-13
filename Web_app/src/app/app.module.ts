@@ -2,7 +2,6 @@ import { NotificationService } from './_shared/notification.service';
 import { ApiService } from './_shared/api.service';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeModule } from './home/home.module';
 import { AlertComponent } from './_components/alert.component';
 import { ErrorInterceptor } from './hepers/error.interceptor';
 import { JwtInterceptor } from './hepers/jwt.interceptor';
@@ -18,7 +17,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { HeaderComponent } from './header/header.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ChangeTextDirective } from './change-text.directive';
 import { BnNgIdleService } from 'bn-ng-idle';
@@ -29,9 +27,7 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     LoginComponent,
     NotFoundComponent,
-    HomeComponent,
     AlertComponent,
-    HeaderComponent,
     ChangeTextDirective,
     FooterComponent,
   ],

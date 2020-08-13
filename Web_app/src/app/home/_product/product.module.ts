@@ -1,7 +1,7 @@
-import { AuthGuard } from './../hepers/auth.guard';
 import { Router, Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AuthGuard } from 'src/app/hepers';
 const routes: Routes = [
   {
     path: '',

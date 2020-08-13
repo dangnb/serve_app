@@ -1,11 +1,10 @@
-import { ApiService } from './../../../_shared/api.service';
-import { NotificationService } from './../../../_shared/notification.service';
-import { CategoryProductService } from './../category.product.service';
-import { AlertService } from './../../../_services/alert.service';
-import { AuthenticationService } from './../../../_services/authentication.service';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
+import { ApiService } from 'src/app/_shared/api.service';
+import { AuthenticationService } from 'src/app/_services';
+import { CategoryProductService } from '../category.product.service';
+import { NotificationService } from 'src/app/_shared/notification.service';
 
 @Component({
   selector: 'app-create',

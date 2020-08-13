@@ -1,4 +1,3 @@
-import { MaterialModule } from './../../material/material.module';
 import { SupplierComponent } from './manager/supplier.component';
 import { SupplierService } from './supplier.service';
 import { Routes, RouterModule } from '@angular/router';
@@ -7,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { CreateComponent } from './create/create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MaterialModule } from 'src/app/material/material.module';
 const router: Routes = [
   { path: '', component: SupplierComponent }
 ]
