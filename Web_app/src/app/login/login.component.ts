@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { AlertService } from "./../_services/alert.service";
 import { AuthenticationService } from "./../_services/authentication.service";
 import { Component, OnInit } from "@angular/core";
@@ -12,6 +13,7 @@ import { first } from "rxjs/operators";
   providers: [],
 })
 export class LoginComponent implements OnInit {
+  title = "Login";
   rfContact: FormGroup;
   loading = false;
   submitted = false;
@@ -22,13 +24,15 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder,
     private authenticationService: AuthenticationService,
-    private alertService: AlertService
+    private alertService: AlertService,
+    private titleService: Title
   ) {
     if (this.authenticationService.currentUserValue) {
       this.router.navigate(["/"]);
     }
   }
   ngOnInit() {
+    this.titleService.setTitle(this.title);
     this.rfContact = this.fb.group({
       username: new FormControl(),
       password: new FormControl(),

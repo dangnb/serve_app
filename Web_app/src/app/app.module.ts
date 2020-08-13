@@ -6,7 +6,7 @@ import { HomeModule } from './home/home.module';
 import { AlertComponent } from './_components/alert.component';
 import { ErrorInterceptor } from './hepers/error.interceptor';
 import { JwtInterceptor } from './hepers/jwt.interceptor';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -52,7 +52,8 @@ import { FooterComponent } from './footer/footer.component';
     BnNgIdleService,
     ApiService,
     ToastrService,
-    NotificationService
+    NotificationService,
+    Title
   ],
   bootstrap: [AppComponent],
 })
