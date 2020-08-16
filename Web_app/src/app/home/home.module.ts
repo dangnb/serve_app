@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 import { HomeRoutingModule } from './home-routing.module';
+import { FootersComponent } from './footers/footers.component';
 
 @NgModule({
     declarations: [
         HomeComponent,
-        MenuComponent
+        MenuComponent,
+        FootersComponent
     ],
     imports: [
         CommonModule,

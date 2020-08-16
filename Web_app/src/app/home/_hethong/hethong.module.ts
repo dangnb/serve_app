@@ -1,20 +1,20 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PermissionComponent } from './permission/permission.component';
 import { AuthGuard } from 'src/app/hepers';
-const routes: Routes = [
-  {
-    path: 'account',
-    loadChildren: () => import('./account/account.module').then(m => m.AccountModule), canActivate: [AuthGuard]
-  }
-];
-
+import { PermissionComponent } from './permission/manage/permission.component';
+import { MaterialModule } from 'src/app/material/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { HeThongRoutingModule } from './hethong.routing.module';
 @NgModule({
-  declarations: [PermissionComponent],
+  declarations: [],
   imports: [
+    MaterialModule,
     CommonModule,
-    RouterModule.forChild(routes)
+    ReactiveFormsModule,
+    NgxPaginationModule,
+    HeThongRoutingModule
   ]
 })
 export class HeThongModule { }

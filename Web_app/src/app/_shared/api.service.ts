@@ -41,6 +41,19 @@ export class ApiService {
             catchError(error => of([]))
         );
     }
+
+    public getAllListAll(urlApi: string): Observable<any> {
+        let url = environment.url + urlApi;
+        return this.http.post<ResultApi>(url, "", {
+            params: {
+                Authorization: `Bearer  ${this.token}`
+            }
+        }).pipe(
+            tap(response => response),
+            catchError(error => of([]))
+        );
+    }
+
     CreateOrUpdate(model: any, urlApi: string): Promise<any> {
         let url = environment.url + urlApi;
         var promise = this.http.post(url, model, {

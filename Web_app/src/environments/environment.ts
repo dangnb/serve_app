@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  timeout: 600,
+  timeout: 1,
   url: 'http://localhost:9092'
 };
 

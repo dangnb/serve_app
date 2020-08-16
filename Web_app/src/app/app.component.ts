@@ -38,4 +38,3 @@ export class AppComponent {
     this.titleService.setTitle(this.title);
   }
 }
-

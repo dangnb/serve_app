@@ -25,17 +25,31 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/menu")
 public class MenuController {
-      public static final Logger logger = LogManager.getLogger(MenuController.class);
+
+    public static final Logger logger = LogManager.getLogger(MenuController.class);
 
     @Autowired
     private MenuService menuService;
-    
+
     @RequestMapping(value = "/getmenu", method = RequestMethod.POST, produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     @ResponseBody
     public ResponseEntity<?> getmenu(@RequestParam("userName") String usename) {
         OutputResult result = new OutputResult();
         try {
             result.setListItems(menuService.GetList(usename));
+            return ResponseEntity.ok(result);
+        } catch (Exception e) {
+            logger.error(e);
+            return null;
+        }
+    }
+
+    @RequestMapping(value = "/getall", method = RequestMethod.POST, produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    @ResponseBody
+    public ResponseEntity<?> getall() {
+        OutputResult result = new OutputResult();
+        try {
+            result.setListItems(menuService.GetAll());
             return ResponseEntity.ok(result);
         } catch (Exception e) {
             logger.error(e);

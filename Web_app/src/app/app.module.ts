@@ -21,7 +21,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ChangeTextDirective } from './change-text.directive';
 import { BnNgIdleService } from 'bn-ng-idle';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
-import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +28,6 @@ import { FooterComponent } from './footer/footer.component';
     NotFoundComponent,
     AlertComponent,
     ChangeTextDirective,
-    FooterComponent,
   ],
   imports: [
     BrowserModule,

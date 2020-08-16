@@ -14,4 +14,5 @@ import java.util.List;
  */
 public interface MenuService {
     List<MenuBO> GetList(String userName);
+    List<MenuBO> GetAll();
 }

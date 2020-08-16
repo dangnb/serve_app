@@ -8,6 +8,7 @@ package com.esc.DAO;
 import com.esc.BO.MenuBO;
 import java.util.List;
 import javax.transaction.Transactional;
+import org.hibernate.Criteria;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
@@ -30,5 +31,10 @@ public class MenuDAO extends AbstractHibernateDAO<MenuBO> implements java.io.Ser
         query.setParameter("userName", userName);
         List<MenuBO> list = query.list();
         return list;
+    }
+    
+    public List<MenuBO>GetAll(){
+        Criteria criteria = getCurrentSession().createCriteria(MenuBO.class);
+        return criteria.list();
     }
 }

@@ -1,25 +1,24 @@
-import { AccountModel } from './../account.model';
-import { MatDialog, MatDialogConfig } from '@angular/material';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/_shared/api.service';
-import { CreateComponent } from '../create/create.component';
-import { AccountService } from '../account.service';
 import { ResultApi } from 'src/app/_models/ResultAPI';
 import { InputSearch } from 'src/app/_models/InputSearch';
+import { RoleModel } from '../role.model';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { AccountService } from '../../account/account.service';
 import { NotificationService } from 'src/app/_shared/notification.service';
+import { ApiService } from 'src/app/_shared/api.service';
+import { CreateComponent } from '../create/create.component';
 
 @Component({
-  selector: 'app-manager',
-  templateUrl: './manager.component.html',
-  styleUrls: ['./manager.component.css']
+  selector: 'app-permission',
+  templateUrl: './permission.component.html',
+  styleUrls: ['./permission.component.css']
 })
-export class ManagerComponent implements OnInit {
-  //khai bao bien
+export class PermissionComponent implements OnInit {
   stt: number;
   check: boolean = false;
   public result: ResultApi;
-  collection = { count: 60, data: Array<AccountModel>() };
+  collection = { count: 60, data: Array<RoleModel>() };
   config = {
     id: 'custom',
     itemsPerPage: 10,
@@ -44,10 +43,10 @@ export class ManagerComponent implements OnInit {
     private dialog: MatDialog,
     private service: ApiService,
     private accountService: AccountService,
-    private notificationService: NotificationService) { }
+    private notificationService: NotificationService
+  ) { }
 
   ngOnInit() {
-    debugger;
     this.rfSearch = this.fb.group({
       name: new FormControl(),
       code: new FormControl(),
@@ -55,16 +54,15 @@ export class ManagerComponent implements OnInit {
       toDate: new Date().setDate((new Date()).getDate() - 30),
     });
     this.input = new InputSearch();
-    this.getListAccount(this.input);
+    this.getListRole(this.input);
   }
-
-  async getListAccount(input: InputSearch) {
-    this.collection.data = new Array<AccountModel>();
-
+  async getListRole(input: InputSearch) {
+    this.collection.data = new Array<RoleModel>();
+    debugger;
     input.position = this.config.currentPage * 10 - 10;
     input.pageSize = this.config.itemsPerPage;
     this.stt = input.position + 1;
-    await this.service.getAllList(input, "/account/getallaccount").subscribe(
+    await this.service.getAllList(input, "/role/getRoles").subscribe(
       (res) => {
         this.result = res;
         this.config.totalItems = this.result.total;
@@ -82,11 +80,11 @@ export class ManagerComponent implements OnInit {
     this.input.code = value.code;
     this.input.fromDate = value.fromDate;
     this.input.toDate = value.toDate;
-    this.getListAccount(this.input);
+    this.getListRole(this.input);
   }
   onPageChange(event) {
     this.config.currentPage = event;
-    this.getListAccount(this.input);
+    this.getListRole(this.input);
   }
   openCreate() {
     const dialogConfig = new MatDialogConfig();
@@ -94,31 +92,7 @@ export class ManagerComponent implements OnInit {
     dialogConfig.autoFocus = true;
     dialogConfig.width = "60%";
     this.dialog.open(CreateComponent, dialogConfig).afterClosed().subscribe(res =>
-      this.getListAccount(this.input)
+      this.getListRole(this.input)
     );
-  }
-  delete(value) {
-    this.service.Delete(value, "/account/delete").then(
-      (res) => {
-        this.notificationService.showSuccess("Xóa tài khoản thành công");
-        this.getListAccount(this.input);
-      }
-    ).catch(error => {
-      this.notificationService.showError("Error", "Xóa tài khoản thất bại");
-    });
-  }
-  onEdit(row) {
-    console.log(row);
-    this.service.GetByKey(row.id, "/account/getByKey").subscribe(
-      (res) => {
-        this.accountService.populateForm(res);
-      }
-    );
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    dialogConfig.width = "60%";
-    this.dialog.open(CreateComponent, dialogConfig);
-
   }
 }
