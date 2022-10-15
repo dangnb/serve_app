@@ -1,0 +1,372 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\WEBAPI\\WEBAPI.csproj": {}
+  },
+  "projects": {
+    "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Authen.JWT\\Authen.JWT.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Authen.JWT\\Authen.JWT.csproj",
+        "projectName": "Authen.JWT",
+        "projectPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Authen.JWT\\Authen.JWT.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Authen.JWT\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Core\\Shop.Core.csproj": {
+                "projectPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Core\\Shop.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.24.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.15, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\SessionManager\\SessionManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\SessionManager\\SessionManager.csproj",
+        "projectName": "SessionManager",
+        "projectPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\SessionManager\\SessionManager.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\SessionManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.23.1, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.3.13, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Common\\Shop.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Common\\Shop.Common.csproj",
+        "projectName": "Shop.Common",
+        "projectPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Common\\Shop.Common.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Core\\Shop.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Core\\Shop.Core.csproj",
+        "projectName": "Shop.Core",
+        "projectPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Core\\Shop.Core.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\SessionManager\\SessionManager.csproj": {
+                "projectPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\SessionManager\\SessionManager.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[5.7.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\WEBAPI\\WEBAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\WEBAPI\\WEBAPI.csproj",
+        "projectName": "WEBAPI",
+        "projectPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\WEBAPI\\WEBAPI.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\WEBAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Authen.JWT\\Authen.JWT.csproj": {
+                "projectPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Authen.JWT\\Authen.JWT.csproj"
+              },
+              "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\SessionManager\\SessionManager.csproj": {
+                "projectPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\SessionManager\\SessionManager.csproj"
+              },
+              "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Common\\Shop.Common.csproj": {
+                "projectPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Common\\Shop.Common.csproj"
+              },
+              "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Core\\Shop.Core.csproj": {
+                "projectPath": "D:\\WorkPlace\\HOME\\Leaning\\NET_CORE\\SHOP\\Shop.Core\\Shop.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Castle.Windsor": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.Extensions.Logging.Log4Net.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.3.13, )"
+            },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.5.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

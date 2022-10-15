@@ -1,0 +1,197 @@
+2022-10-15 22:53:13,793 ERROR NHibernate.AdoNet.AbstractBatcher.Error [0] - MESSAGE: Could not execute query: select userdata0_.UserID as userid1_4_, userdata0_.Username as username2_4_, userdata0_.FullName as fullname3_4_, userdata0_.Email as email4_4_, userdata0_.Password as password5_4_, userdata0_.PasswordSalt as passwordsalt6_4_, userdata0_.HashAlgorithm as hashalgorithm7_4_, userdata0_.IsLocked as islocked8_4_, userdata0_.IsActive as isactive9_4_, userdata0_.IsDeleted as isdeleted10_4_, userdata0_.CreateDate as createdate11_4_, userdata0_.ModifiedDate as modifieddate12_4_, userdata0_.FailedPassAttemptCount as failedpassattemptcount13_4_, userdata0_.GroupCode as groupcode14_4_, userdata0_.Policy as policy15_4_ from Userdata userdata0_ where (userdata0_.GroupCode is null) and userdata0_.Username=@p0
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'GroupCode'.
+Invalid column name 'HashAlgorithm'.
+Invalid column name 'IsLocked'.
+Invalid column name 'IsActive'.
+Invalid column name 'IsDeleted'.
+Invalid column name 'ModifiedDate'.
+Invalid column name 'GroupCode'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.DoExecuteReader(DbCommand cmd)
+ClientConnectionId:01ffb8e7-19fa-4564-8f83-fd57c00712d1
+Error Number:207,State:1,Class:16
+2022-10-15 22:53:13,848 WARN  NHibernate.Util.ADOExceptionReporter.Warn [0] - MESSAGE: Invalid column name 'GroupCode'.
+Invalid column name 'HashAlgorithm'.
+Invalid column name 'IsLocked'.
+Invalid column name 'IsActive'.
+Invalid column name 'IsDeleted'.
+Invalid column name 'ModifiedDate'.
+Invalid column name 'GroupCode'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'GroupCode'.
+Invalid column name 'HashAlgorithm'.
+Invalid column name 'IsLocked'.
+Invalid column name 'IsActive'.
+Invalid column name 'IsDeleted'.
+Invalid column name 'ModifiedDate'.
+Invalid column name 'GroupCode'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.DoExecuteReader(DbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(DbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(DbCommand st, QueryParameters queryParameters, ISessionImplementor session, IResultTransformer forcedResultTransformer)
+ClientConnectionId:01ffb8e7-19fa-4564-8f83-fd57c00712d1
+Error Number:207,State:1,Class:16
+2022-10-15 22:53:13,850 ERROR NHibernate.Util.ADOExceptionReporter.Error [0] - MESSAGE: Invalid column name 'GroupCode'.
+Invalid column name 'HashAlgorithm'.
+Invalid column name 'IsLocked'.
+Invalid column name 'IsActive'.
+Invalid column name 'IsDeleted'.
+Invalid column name 'ModifiedDate'.
+Invalid column name 'GroupCode'.
+2022-10-15 22:53:13,853 WARN  NHibernate.Util.ADOExceptionReporter.Warn [0] - MESSAGE: Invalid column name 'GroupCode'.
+Invalid column name 'HashAlgorithm'.
+Invalid column name 'IsLocked'.
+Invalid column name 'IsActive'.
+Invalid column name 'IsDeleted'.
+Invalid column name 'ModifiedDate'.
+Invalid column name 'GroupCode'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'GroupCode'.
+Invalid column name 'HashAlgorithm'.
+Invalid column name 'IsLocked'.
+Invalid column name 'IsActive'.
+Invalid column name 'IsDeleted'.
+Invalid column name 'ModifiedDate'.
+Invalid column name 'GroupCode'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.DoExecuteReader(DbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(DbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(DbCommand st, QueryParameters queryParameters, ISessionImplementor session, IResultTransformer forcedResultTransformer)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies, IResultTransformer forcedResultTransformer, QueryCacheResultBuilder queryCacheResultBuilder)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies, IResultTransformer forcedResultTransformer, QueryCacheResultBuilder queryCacheResultBuilder)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters, IResultTransformer forcedResultTransformer, QueryCacheResultBuilder queryCacheResultBuilder)
+ClientConnectionId:01ffb8e7-19fa-4564-8f83-fd57c00712d1
+Error Number:207,State:1,Class:16
+2022-10-15 22:53:13,854 ERROR NHibernate.Util.ADOExceptionReporter.Error [0] - MESSAGE: Invalid column name 'GroupCode'.
+Invalid column name 'HashAlgorithm'.
+Invalid column name 'IsLocked'.
+Invalid column name 'IsActive'.
+Invalid column name 'IsDeleted'.
+Invalid column name 'ModifiedDate'.
+Invalid column name 'GroupCode'.
+2022-10-15 22:53:13,856 WARN  NHibernate.Util.ADOExceptionReporter.Warn [0] - MESSAGE: Invalid column name 'GroupCode'.
+Invalid column name 'HashAlgorithm'.
+Invalid column name 'IsLocked'.
+Invalid column name 'IsActive'.
+Invalid column name 'IsDeleted'.
+Invalid column name 'ModifiedDate'.
+Invalid column name 'GroupCode'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'GroupCode'.
+Invalid column name 'HashAlgorithm'.
+Invalid column name 'IsLocked'.
+Invalid column name 'IsActive'.
+Invalid column name 'IsDeleted'.
+Invalid column name 'ModifiedDate'.
+Invalid column name 'GroupCode'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.DoExecuteReader(DbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(DbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(DbCommand st, QueryParameters queryParameters, ISessionImplementor session, IResultTransformer forcedResultTransformer)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies, IResultTransformer forcedResultTransformer, QueryCacheResultBuilder queryCacheResultBuilder)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies, IResultTransformer forcedResultTransformer, QueryCacheResultBuilder queryCacheResultBuilder)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters, IResultTransformer forcedResultTransformer, QueryCacheResultBuilder queryCacheResultBuilder)
+ClientConnectionId:01ffb8e7-19fa-4564-8f83-fd57c00712d1
+Error Number:207,State:1,Class:16
+2022-10-15 22:53:13,857 ERROR NHibernate.Util.ADOExceptionReporter.Error [0] - MESSAGE: Invalid column name 'GroupCode'.
+Invalid column name 'HashAlgorithm'.
+Invalid column name 'IsLocked'.
+Invalid column name 'IsActive'.
+Invalid column name 'IsDeleted'.
+Invalid column name 'ModifiedDate'.
+Invalid column name 'GroupCode'.
+2022-10-15 22:53:17,935 ERROR WEBAPI.Controllers.AuthController.Login [0] - MESSAGE: NHibernate.Exceptions.GenericADOException: could not execute query
+[ select userdata0_.UserID as userid1_4_, userdata0_.Username as username2_4_, userdata0_.FullName as fullname3_4_, userdata0_.Email as email4_4_, userdata0_.Password as password5_4_, userdata0_.PasswordSalt as passwordsalt6_4_, userdata0_.HashAlgorithm as hashalgorithm7_4_, userdata0_.IsLocked as islocked8_4_, userdata0_.IsActive as isactive9_4_, userdata0_.IsDeleted as isdeleted10_4_, userdata0_.CreateDate as createdate11_4_, userdata0_.ModifiedDate as modifieddate12_4_, userdata0_.FailedPassAttemptCount as failedpassattemptcount13_4_, userdata0_.GroupCode as groupcode14_4_, userdata0_.Policy as policy15_4_ from Userdata userdata0_ where (userdata0_.GroupCode is null) and userdata0_.Username=@p0 ]
+  Name:p2 - Value:root
+[SQL: select userdata0_.UserID as userid1_4_, userdata0_.Username as username2_4_, userdata0_.FullName as fullname3_4_, userdata0_.Email as email4_4_, userdata0_.Password as password5_4_, userdata0_.PasswordSalt as passwordsalt6_4_, userdata0_.HashAlgorithm as hashalgorithm7_4_, userdata0_.IsLocked as islocked8_4_, userdata0_.IsActive as isactive9_4_, userdata0_.IsDeleted as isdeleted10_4_, userdata0_.CreateDate as createdate11_4_, userdata0_.ModifiedDate as modifieddate12_4_, userdata0_.FailedPassAttemptCount as failedpassattemptcount13_4_, userdata0_.GroupCode as groupcode14_4_, userdata0_.Policy as policy15_4_ from Userdata userdata0_ where (userdata0_.GroupCode is null) and userdata0_.Username=@p0]
+ ---> System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'GroupCode'.
+Invalid column name 'HashAlgorithm'.
+Invalid column name 'IsLocked'.
+Invalid column name 'IsActive'.
+Invalid column name 'IsDeleted'.
+Invalid column name 'ModifiedDate'.
+Invalid column name 'GroupCode'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at NHibernate.AdoNet.AbstractBatcher.DoExecuteReader(DbCommand cmd)
+   at NHibernate.AdoNet.AbstractBatcher.ExecuteReader(DbCommand cmd)
+   at NHibernate.Loader.Loader.GetResultSet(DbCommand st, QueryParameters queryParameters, ISessionImplementor session, IResultTransformer forcedResultTransformer)
+   at NHibernate.Loader.Loader.DoQuery(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies, IResultTransformer forcedResultTransformer, QueryCacheResultBuilder queryCacheResultBuilder)
+   at NHibernate.Loader.Loader.DoQueryAndInitializeNonLazyCollections(ISessionImplementor session, QueryParameters queryParameters, Boolean returnProxies, IResultTransformer forcedResultTransformer, QueryCacheResultBuilder queryCacheResultBuilder)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters, IResultTransformer forcedResultTransformer, QueryCacheResultBuilder queryCacheResultBuilder)
+ClientConnectionId:01ffb8e7-19fa-4564-8f83-fd57c00712d1
+Error Number:207,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters, IResultTransformer forcedResultTransformer, QueryCacheResultBuilder queryCacheResultBuilder)
+   at NHibernate.Loader.Loader.DoList(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Loader.Loader.ListIgnoreQueryCache(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Hql.Ast.ANTLR.QueryTranslatorImpl.List(ISessionImplementor session, QueryParameters queryParameters)
+   at NHibernate.Engine.Query.HQLQueryPlan.PerformList(QueryParameters queryParameters, ISessionImplementor session, IList results)
+   at NHibernate.Impl.SessionImpl.List(IQueryExpression queryExpression, QueryParameters queryParameters, IList results, Object filterConnection)
+   at NHibernate.Impl.SessionImpl.List(IQueryExpression queryExpression, QueryParameters queryParameters, IList results)
+   at NHibernate.Impl.AbstractSessionImpl.List[T](IQueryExpression query, QueryParameters parameters)
+   at NHibernate.Impl.AbstractQueryImpl2.List[T]()
+   at NHibernate.Linq.DefaultQueryProvider.ExecuteList[TResult](Expression expression)
+   at NHibernate.Linq.NhQueryable`1.System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at SessionManager.BaseService`2.Get(Expression`1 predicate) in D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\BaseService.cs:line 222
+   at Shop.Core.Implements.UserdataService.GetbyName(String groupcode, String username) in D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\Implements\UserdataService.cs:line 29
+   at Shop.Core.Implements.UserdataService.Authenticate(String groupcode, String username, String password) in D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\Implements\UserdataService.cs:line 20
+   at WEBAPI.Controllers.AuthController.Login(LoginModel model)

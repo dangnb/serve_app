@@ -1,0 +1,12 @@
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Common\bin\Debug\net6.0\Shop.Common.deps.json
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Common\bin\Debug\net6.0\Shop.Common.dll
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Common\bin\Debug\net6.0\Shop.Common.pdb
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Common\obj\Debug\net6.0\Shop.Common.csproj.AssemblyReference.cache
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Common\obj\Debug\net6.0\Shop.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Common\obj\Debug\net6.0\Shop.Common.AssemblyInfoInputs.cache
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Common\obj\Debug\net6.0\Shop.Common.AssemblyInfo.cs
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Common\obj\Debug\net6.0\Shop.Common.csproj.CoreCompileInputs.cache
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Common\obj\Debug\net6.0\Shop.Common.dll
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Common\obj\Debug\net6.0\refint\Shop.Common.dll
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Common\obj\Debug\net6.0\Shop.Common.pdb
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Common\obj\Debug\net6.0\ref\Shop.Common.dll

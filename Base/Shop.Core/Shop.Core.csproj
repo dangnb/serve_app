@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Domain\HeThong\Company.hbm.xml" />
+    <None Remove="Domain\HeThong\Permission.hbm.xml" />
+    <None Remove="Domain\HeThong\PermissionGroup.hbm.xml" />
+    <None Remove="Domain\HeThong\Role.hbm.xml" />
+    <None Remove="Domain\HeThong\Userdata.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\HeThong\Permission.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\HeThong\PermissionGroup.hbm.xml" />
+    <EmbeddedResource Include="Domain\HeThong\Role.hbm.xml" />
+    <EmbeddedResource Include="Domain\HeThong\Userdata.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Domain\HeThong\Company.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="5.7.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SessionManager\SessionManager.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FX.Core">
+      <HintPath>..\Lib\FX.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

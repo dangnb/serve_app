@@ -1,0 +1,12 @@
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\bin\Debug\net6.0\SessionManager.deps.json
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\bin\Debug\net6.0\SessionManager.dll
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\bin\Debug\net6.0\SessionManager.pdb
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\obj\Debug\net6.0\SessionManager.csproj.AssemblyReference.cache
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\obj\Debug\net6.0\SessionManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\obj\Debug\net6.0\SessionManager.AssemblyInfoInputs.cache
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\obj\Debug\net6.0\SessionManager.AssemblyInfo.cs
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\obj\Debug\net6.0\SessionManager.csproj.CoreCompileInputs.cache
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\obj\Debug\net6.0\SessionManager.dll
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\obj\Debug\net6.0\refint\SessionManager.dll
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\obj\Debug\net6.0\SessionManager.pdb
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\obj\Debug\net6.0\ref\SessionManager.dll

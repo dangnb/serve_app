@@ -1,0 +1,17 @@
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\bin\Debug\net6.0\Domain\HeThong\Company.hbm.xml
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\bin\Debug\net6.0\Shop.Core.deps.json
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\bin\Debug\net6.0\Shop.Core.dll
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\bin\Debug\net6.0\Shop.Core.pdb
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\bin\Debug\net6.0\FX.Core.dll
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\bin\Debug\net6.0\SessionManager.dll
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\bin\Debug\net6.0\SessionManager.pdb
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\obj\Debug\net6.0\Shop.Core.csproj.AssemblyReference.cache
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\obj\Debug\net6.0\Shop.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\obj\Debug\net6.0\Shop.Core.AssemblyInfoInputs.cache
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\obj\Debug\net6.0\Shop.Core.AssemblyInfo.cs
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\obj\Debug\net6.0\Shop.Core.csproj.CoreCompileInputs.cache
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\obj\Debug\net6.0\Shop.Core.csproj.CopyComplete
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\obj\Debug\net6.0\Shop.Core.dll
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\obj\Debug\net6.0\refint\Shop.Core.dll
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\obj\Debug\net6.0\Shop.Core.pdb
+D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\Shop.Core\obj\Debug\net6.0\ref\Shop.Core.dll

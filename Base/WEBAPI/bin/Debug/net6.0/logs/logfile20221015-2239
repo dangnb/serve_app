@@ -1,0 +1,12 @@
+2022-10-15 22:39:51,466 ERROR NHibernate.Cfg.Configuration.Error [0] - MESSAGE: An association from the table Role_Permission refers to an unmapped class: Shop.Core.Domain.Permission
+NHibernate.MappingException: An association from the table Role_Permission refers to an unmapped class: Shop.Core.Domain.Permission
+2022-10-15 22:39:57,113 ERROR WEBAPI.Controllers.AuthController.Login [31] - MESSAGE: NHibernate.MappingException: An association from the table Role_Permission refers to an unmapped class: Shop.Core.Domain.Permission
+   at NHibernate.Cfg.Configuration.LogAndThrow(Exception exception)
+   at NHibernate.Cfg.Configuration.SecondPassCompileForeignKeys(Table table, ISet`1 done)
+   at NHibernate.Cfg.Configuration.SecondPassCompile()
+   at NHibernate.Cfg.Configuration.BuildSessionFactory()
+   at SessionManager.NHibernateSession.NHibernateSessionManager.GetSessionFactoryFor(String sessionFactoryConfigPath) in D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\NHibernateSession\NHibernateSessionManager.cs:line 79
+   at SessionManager.NHibernateSession.NHibernateSessionManager.GetSessionFrom(String sessionFactoryConfigPath) in D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\NHibernateSession\NHibernateSessionManager.cs:line 98
+   at SessionManager.BaseService`2.get_NHibernateSession() in D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\BaseService.cs:line 293
+   at SessionManager.BaseService`2.get_Query() in D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\SessionManager\BaseService.cs:line 358
+   at WEBAPI.Controllers.AuthController.Login(LoginModel model) in D:\WorkPlace\HOME\Leaning\NET_CORE\SHOP\WEBAPI\Controllers\AuthController.cs:line 31
